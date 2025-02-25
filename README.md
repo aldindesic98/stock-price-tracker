@@ -22,4 +22,5 @@ php artisan import:stock-data
 Env keys for Alpha vantage API:
 
 ALPHA_VANTAGE_API_KEY=RJIIFS4CSJ4A3E37
+
 ALPHA_VANTAGE_URL=https://www.alphavantage.co/query
