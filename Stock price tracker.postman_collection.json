@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "aaf2f2c8-11e1-422b-9746-c56394972def",
+		"name": "Stock price tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15119001"
+	},
+	"item": [
+		{
+			"name": "all stocks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}api/all-stocks",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"all-stocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stock by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}api/stock/1",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"stock",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "set of stocks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}api/stock-set?stock_ids[]=1&stock_ids[]=2",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"stock-set"
+					],
+					"query": [
+						{
+							"key": "stock_ids[]",
+							"value": "1"
+						},
+						{
+							"key": "stock_ids[]",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "price report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}api/price-change-report?stock_ids[]=1&startDateTime=2025-2-22 11:30&endDateTime=2025-2-25 12:30",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"price-change-report"
+					],
+					"query": [
+						{
+							"key": "stock_ids[]",
+							"value": "1"
+						},
+						{
+							"key": "startDateTime",
+							"value": "2025-2-22 11:30"
+						},
+						{
+							"key": "endDateTime",
+							"value": "2025-2-25 12:30"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
